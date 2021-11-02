@@ -12,7 +12,6 @@ public class Principal {
 		int seccion = 0;
 		boolean repetir = true;
 		boolean datoVal = true;
-		int logoLong = 0;
 		int numSecciones = 7;
 		String logo = new String("             .,-:;//;:=,\r\n"
 				+ "         . :H@@@MM@M#H/.,+%;,\r\n"
@@ -158,11 +157,9 @@ public class Principal {
 		}while(seccion != 7);
 		
 		
-		System.out.println("\n\tWe do what we must because we can\n");
+		System.out.println("\n\tWe do what we must because we can\n");		//A partir de aquí es algo extra
 		
-		logoLong = logo.length();
-		
-		for(int i = 0; i <= logoLong-1; i++)
+		for(int i = 0; i < logo.length(); i++)
 		{
 			if(logo.charAt(i) == '\n' || logo.charAt(i) == '\r' || logo.charAt(i) == ' ')
 			{

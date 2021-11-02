@@ -4,12 +4,10 @@ public class Principal {
 
 	public static void main(String[] args) 
 	{
-		int corredores = 5, carreras = 3;
+		int corredores = 5;
 		String titulos[] = {"Corredores", "Carrera 1", "Carrera 2", "Carrera 3", "Media Corredor"};
 		String nombres[] = {"Nombre1","Nombre2","Nombre3","Nombre4","Nombre5", "Suma tiempos", "Media tiempos"};
 		double tiempo[][] = {{12.5, 14.2, 10.8}, {14.3, 15.6, 9.3}, {11.7, 13.5, 12.2}, {0 ,0 , 0}, {0, 0, 0}};
-		double sumaCa1 = 0.0, mediaCa1 = 0.0, sumaCa2 = 0.0, mediaCa2 = 0.0, sumaCa3 = 0.0, mediaCa3 = 0.0;
-		double mediaCo1 = 0.0, mediaCo2 = 0.0, mediaCo3 = 0.0, mediaCo4 = 0.0, mediaCo5 = 0.0;
 		double sumaCa[] = {0.0, 0.0, 0.0};
 		double mediaCa[] = {0.0, 0.0, 0.0};
 		double mediaCo[] = {0.0, 0.0, 0.0, 0.0, 0.0};
