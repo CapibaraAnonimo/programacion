@@ -10,7 +10,7 @@ public class Principal {
 		
 		System.out.println("Este programa te pinta una pirámide");
 		
-		System.out.println("Introduce el número de filas de la pirámide");
+		System.out.println("Introduce el número de filas de la irámide");
 		n = Leer.datoInt();
 		nEsp = n - 1;
 		
