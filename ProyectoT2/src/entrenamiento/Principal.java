@@ -40,15 +40,24 @@ public class Principal {
 		boolean case1 = false;
 		boolean case3 = false;
 		boolean case1OArray = false;
-
+		
 		
 		System.out.println("Introduce los siguientes datos para calcular su ingesta de calorias semanales\n");
-		System.out.println("Introduzca su peso: ");
-		peso=Leer.datoDouble();
+		System.out.println("Introduzca su peso en kg: ");
+		do
+		{
+			peso=Leer.datoDouble();
+		}while(peso <= 0);
 		System.out.println("Introduzca su estatura en cm: ");
-		estatura=Leer.datoDouble();
+		do
+		{
+			estatura=Leer.datoDouble();
+		}while(estatura <= 0);
 		System.out.println("Introduzca su edad: ");
-		edad=Leer.datoInt();
+		do
+		{
+			edad=Leer.datoInt();
+		}while(edad <= 0);
 		
 		do 
 		{
@@ -330,6 +339,35 @@ public class Principal {
 				repetir = true;
 				break;
 			case 6:
+				
+				if(case1OArray && case3 == true)
+				{
+					System.out.println("\n\nTabla de calorias semanales");
+			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
+			        for (int i = 0; i < tablaCal.length; i++) 
+			        {
+			            tablaCal[i]=random.nextInt(hasta-desde+1)+desde;
+			            System.out.printf("%.0f\t|",tablaCal[i]);
+			        }
+			        System.out.println("\nTabla de entrenamientos semanales");
+			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
+			        for (int i = 0; i < tablaCal.length; i++) 
+			        {
+			            System.out.printf("%.0f\t|",tablaTiem[i]);
+			        }
+			        System.out.println("\nTabla de entrenamientos dobles");
+			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
+			        for (int i = 0; i < tablaDoble.length; i++) 
+			        {
+			            System.out.printf("%d\t|",tablaDoble[i]);
+			        }
+				}
+				else 
+				{
+					System.out.println("\nDebe entrar antes en la opción 1 o introducir los datos manualmente usando la "
+							+ "opción 2 y haber entrado en la sección 3");
+				}
+				
 				repetir = false;
 				break;
 			default: 
