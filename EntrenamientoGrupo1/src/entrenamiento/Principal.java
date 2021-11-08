@@ -43,7 +43,7 @@ public class Principal {
 		boolean case1OArray = false;
 		
 		System.out.println("Bienvenido al creador de entrenamiento personalizado");
-		System.out.println("Antes de nada introduzca unos datos basicos para el calculo de la "
+		System.out.println("Antes de nada introduzca unos datos básicos para el cálculo de la "
 				+ "ingesta diaria y el tiempo de entrenamiento\n");
 		
 		System.out.println("Introduzca su peso en kg: ");
@@ -52,7 +52,7 @@ public class Principal {
 			peso=Leer.datoDouble();
 			if(peso <= 0)
 			{
-				System.out.println("Peso no valido, introduzca otro");
+				System.out.println("Peso no válido, introduzca otro");
 			}
 		}while(peso <= 0);
 		System.out.println("Introduzca su estatura en cm: ");
@@ -61,7 +61,7 @@ public class Principal {
 			estatura=Leer.datoDouble();
 			if(estatura <= 0)
 			{
-				System.out.println("Estatura no valido, introduzca otra");
+				System.out.println("Estatura no válida, introduzca otra");
 			}
 		}while(estatura <= 0);
 		System.out.println("Introduzca su edad: ");
@@ -70,7 +70,7 @@ public class Principal {
 			edad=Leer.datoInt();
 			if(edad <= 0)
 			{
-				System.out.println("Edad no valida, introduzca otra");
+				System.out.println("Edad no válida, introduzca otra");
 			}
 		}while(edad <= 0);
 		
@@ -114,7 +114,7 @@ public class Principal {
 			
 				
 			System.out.println("\n\n1. Genera aleatoriamente las calorías de cada día de la semana\n"
-					+ "2. Seleccione la cantidad de calorias que quieres un día\n"
+					+ "2. Seleccione la cantidad de cálorias que quieres un día\n"
 					+ "3. Generar el tiempo de entrenamiento\n"
 					+ "4. Días de entrenamientos doble\n"
 					+ "5. Recompensas por entrenamiento doble\n"
@@ -152,7 +152,7 @@ public class Principal {
 							factorActividad=intensa;
 							break;
 						default:
-							System.out.println("\nEscoga una opcion posible");
+							System.out.println("\nEscoga una opción posible");
 							break;
 						}
 				}while(seccion  >4 || seccion < 1);
@@ -179,7 +179,7 @@ public class Principal {
 					tablaCal[i]=random.nextInt(hasta-desde+1)+desde;
 					System.out.printf("%.0f\t|",tablaCal[i]);
 				}
-				System.out.printf("\n\nEstas son tus calorias para cada dia de la semana");
+				System.out.printf("\n\nEstas son tus calorías para cada día de la semana");
 				
 				
 				
@@ -189,7 +189,7 @@ public class Principal {
 				
 				do 
 				{
-					System.out.println("Diga usted el día que quiere seleccionar o Pulse 0 para salir, siendo:");
+					System.out.println("\n\nDiga usted el día que quiere seleccionar o Pulse 0 para salir, siendo:");
 					System.out.println("---------------------------------------------------------------------------------------------------------");
 					System.out.print("1 Lunes \t2 Martes \t3 Miercoles \t4 Jueves \t5 Viernes \t6 Sábado \t7 Domingo\n");
 					num= Leer.datoInt();
@@ -200,7 +200,7 @@ public class Principal {
 						if(cal > 0) 
 						{
 							tablaCal[num-1]= cal; 
-							System.out.printf("Se ha almacenado correctamente en el día: %d :", num);
+							System.out.printf("Se ha almacenado correctamente en el día: %d ", num);
 							System.out.printf("%.2f calorias\n", tablaCal[num-1]);
 						}else 
 						{
@@ -229,6 +229,10 @@ public class Principal {
 						}
 					}
 					System.out.println("Se ha creado la tabla con el tiempo de entrenamiento satisfactóriamente");
+					for(double i : tablaTiem)
+					{
+						System.out.println(i);
+					}
 				}
 				else 
 				{
@@ -248,15 +252,12 @@ public class Principal {
 						numDoble = numDoble + aux1;
 						if(aux1 >= 1) 
 						{
-							System.out.println("Los días de entrenamientos dobles serán el día: ");
+							System.out.println("\nLos días de entrenamientos dobles serán el día: ");
 							for(int i = 0; i < aux1; i++) 
 							{
-								if(aux1 > i && aux1 <= tablaDoble.length) 
-								{
-									numero = random.nextInt(tam2-tam+1)+tam;
-									tablaDoble[numero-1]= tablaDoble[numero-1] + 1;
-									System.out.print(numero+" ");
-								}
+								numero = random.nextInt(tam2-tam+1)+tam;
+								tablaDoble[numero-1]= tablaDoble[numero-1] + 1;
+								System.out.print(numero+" ");
 							}
 							System.out.println("\n-----------------------------------------------------");
 						}else if(aux1 != 0)
@@ -276,7 +277,7 @@ public class Principal {
 					do
 					{
 						System.out.println("\n1. Premio en calorias\n"
-								+ "2. Premio en teimpo de entrenamiento\n"
+								+ "2. Premio en tiempo de entrenamiento\n"
 								+ "3. Ver probabilidad de premios\n"
 								+ "4. Salir\n");
 						
@@ -285,9 +286,10 @@ public class Principal {
 						switch(seccion)
 						{
 						case 1:
-							System.out.println("Ha seleccionado Premio en calorias");
+							System.out.println("Ha seleccionado Premio en calorías");
 							
 							aux1 = random.nextInt(ranMaxP-ranMinP+1)+ranMinP;
+							numDoble--;
 							if(aux1 <= 60)
 							{
 								aux2 = random.nextInt(dias-1-ranMinP+1)+ranMinP;
@@ -313,10 +315,11 @@ public class Principal {
 							System.out.println("Ha seleccionado Premio en Tiempo de Entrenamiento");
 							
 							aux1 = random.nextInt(ranMaxP-ranMinP+1)+ranMinP;
+							numDoble--;
 							if(aux1 <= 60)
 							{
 								aux2 = random.nextInt(dias-1-ranMinP+1)+ranMinP;
-								tablaTiem[aux2] = tablaCal[aux2] - premioTiem;
+								tablaTiem[aux2] = tablaTiem[aux2] - premioTiem;
 								System.out.printf("Enhorabuena, ha ganado -%d minutos de entrenamiento el día %d de la semana\n", premioTiem, aux2+1);
 							}else if(aux1 <= 90)
 							{
@@ -357,20 +360,20 @@ public class Principal {
 				
 				if(case1OArray && case3 == true)
 				{
-					System.out.println("\n\nTabla de calorias semanales");
+					repetir = false;
+					System.out.println("\n\nTabla de calorías semanales");
 			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
 			        for (int i = 0; i < tablaCal.length; i++) 
 			        {
-			            tablaCal[i]=random.nextInt(hasta-desde+1)+desde;
 			            System.out.printf("%.0f\t|",tablaCal[i]);
 			        }
-			        System.out.println("\nTabla de entrenamientos semanales");
+			        System.out.println("\n\nTabla de entrenamientos semanales");
 			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
 			        for (int i = 0; i < tablaCal.length; i++) 
 			        {
 			            System.out.printf("%.0f\t|",tablaTiem[i]);
 			        }
-			        System.out.println("\nTabla de entrenamientos dobles");
+			        System.out.println("\n\nTabla de entrenamientos dobles");
 			        System.out.printf("Lunes\t Martes Miercoles Jueves Viernes Sabado\t Domingo\n");
 			        for (int i = 0; i < tablaDoble.length; i++) 
 			        {
@@ -379,11 +382,11 @@ public class Principal {
 				}
 				else 
 				{
+					repetir = true;
 					System.out.println("\nDebe entrar antes en la opción 1 o introducir los datos manualmente usando la "
 							+ "opción 2 y haber entrado en la sección 3");
 				}
 				
-				repetir = false;
 				break;
 			default: 
 				System.out.println("La sección que ha introducido no existe");
@@ -391,7 +394,7 @@ public class Principal {
 			}
 		}while(repetir);
 		
-		System.out.println("Muchas gracias por usar el programa");
+		System.out.println("\n\n\n\nMuchas gracias por usar el programa, hasta la proxima semana");
 	}
 
 }
