@@ -16,15 +16,7 @@ public class Principal {
 		boolean repetir = true;
 		Random random = new Random(System.nanoTime());
 		double peso = 0, estatura = 0;
-		//Apartado 2
-		int num= 0;
-		double cal=0;
-		//Apartado 3
-		double calMujer=0.95, calHombre=1;
-		double min=1, ocho=8;
-		//Apartado 4
-		int tam=1, tam2=7, numero=0;
-		//Apartado 6
+		//Apartado 1
 		double resultado=0;
 		double factorActividad=1.5;
 		double sedentaria=1.2;
@@ -35,28 +27,51 @@ public class Principal {
 		int hasta=0;
 		double porc=10;
 		int cien=100;
-		double factor1H = 66, factor1M = 655, factor2H = 13.7, factor2M = 9.6, factor3H = 5, factor3M = 1.8, factor4H = 6.8, factor4M = 4.7;
+		double factor1H = 66, factor1M = 655, factor2H = 13.7, factor2M = 9.6;
+		double factor3H = 5, factor3M = 1.8, factor4H = 6.8, factor4M = 4.7;
+		//Apartado 2
+		int num= 0;
+		double cal=0;
+		//Apartado 3
+		double calMujer=0.95, calHombre=1;
+		double min=1, ocho=8;
+		//Apartado 4
+		int tam=1, tam2=7, numero=0;
 		//Comprobación
 		boolean case1 = false;
 		boolean case3 = false;
 		boolean case1OArray = false;
 		
+		System.out.println("Bienvenido al creador de entrenamiento personalizado");
+		System.out.println("Antes de nada introduzca unos datos basicos para el calculo de la "
+				+ "ingesta diaria y el tiempo de entrenamiento\n");
 		
-		System.out.println("Introduce los siguientes datos para calcular su ingesta de calorias semanales\n");
 		System.out.println("Introduzca su peso en kg: ");
 		do
 		{
 			peso=Leer.datoDouble();
+			if(peso <= 0)
+			{
+				System.out.println("Peso no valido, introduzca otro");
+			}
 		}while(peso <= 0);
 		System.out.println("Introduzca su estatura en cm: ");
 		do
 		{
 			estatura=Leer.datoDouble();
+			if(estatura <= 0)
+			{
+				System.out.println("Estatura no valido, introduzca otra");
+			}
 		}while(estatura <= 0);
 		System.out.println("Introduzca su edad: ");
 		do
 		{
 			edad=Leer.datoInt();
+			if(edad <= 0)
+			{
+				System.out.println("Edad no valida, introduzca otra");
+			}
 		}while(edad <= 0);
 		
 		do 
@@ -375,7 +390,8 @@ public class Principal {
 				break;
 			}
 		}while(repetir);
-
+		
+		System.out.println("Muchas gracias por usar el programa");
 	}
 
 }
