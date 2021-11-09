@@ -2,11 +2,11 @@ package ejemplo1;
 
 public class Alumno 
 {
-	int edad;
-	String nombre;
-	String apellidos;
-	double notaMedia;
-	String dni;
+	private  int edad;
+	private String nombre;
+	private String apellidos;
+	private double notaMedia;
+	private String dni;
 	
 	
 	public Alumno()
@@ -23,34 +23,34 @@ public class Alumno
 		this.dni  = new String(dni);
 	}
 	
-	public void AñadirEdad(int edad)
+	public void CambiarEdad(int edad)
 	{
 		this.edad = edad;
 	}
 	
-	public void AñadirNombre(String nombre)
+	public void CambiarNombre(String nombre)
 	{
 		this.nombre = new String(nombre);
 	}
 	
-	public void AñadirApellidos(String apellidos)
+	public void CambiarApellidos(String apellidos)
 	{
 		this.apellidos = new String(apellidos);
 	}
 	
-	public void AñadirNotaMedia(double notaMedia)
+	public void CambiarNotaMedia(double notaMedia)
 	{
 		this.notaMedia = notaMedia;
 	}
 	
-	public void AñadirDNI(String dni)
+	public void CambiarDNI(String dni)
 	{
 		this.dni = new String(dni);
 	}
 	
-	void DecirNombre()
+	public void DecirNombre()
 	{
-		System.out.printf("Mi nombre es %s %s", nombre, apellidos);
+		System.out.printf("Mi nombre es %s %s\n", nombre, apellidos);
 	}
 	
 }
