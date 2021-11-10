@@ -23,29 +23,54 @@ public class Alumno
 		this.dni  = new String(dni);
 	}
 	
-	public void CambiarEdad(int edad)
+	public void setEdad(int edad)
 	{
 		this.edad = edad;
 	}
 	
-	public void CambiarNombre(String nombre)
+	public int getEdad()
+	{
+		return edad;
+	}
+	
+	public void setNombre(String nombre)
 	{
 		this.nombre = new String(nombre);
 	}
 	
-	public void CambiarApellidos(String apellidos)
+	public String getNombre()
+	{
+		return nombre;
+	}
+	
+	public void setApellidos(String apellidos)
 	{
 		this.apellidos = new String(apellidos);
 	}
 	
-	public void CambiarNotaMedia(double notaMedia)
+	public String getApellidos()
+	{
+		return apellidos;
+	}
+	
+	public void setNotaMedia(double notaMedia)
 	{
 		this.notaMedia = notaMedia;
 	}
 	
-	public void CambiarDNI(String dni)
+	public double getNotaMedia()
+	{
+		return notaMedia;
+	}
+	
+	public void setDNI(String dni)
 	{
 		this.dni = new String(dni);
+	}
+	
+	public String getDNI()
+	{
+		return dni;
 	}
 	
 	public void DecirNombre()

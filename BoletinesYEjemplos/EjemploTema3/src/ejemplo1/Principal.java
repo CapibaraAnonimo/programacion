@@ -1,7 +1,5 @@
 package ejemplo1;
 
-import java.io.NotActiveException;
-
 import lectura.Leer;
 
 public class Principal {
