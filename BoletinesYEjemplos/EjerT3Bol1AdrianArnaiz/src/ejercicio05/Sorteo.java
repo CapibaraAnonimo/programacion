@@ -32,23 +32,17 @@ public class Sorteo
 	
 	public int paresONones()
 	{
-		aux = ran.nextInt(maxPoN-minPoN+1)+minPoN;
-		
-		return aux;
+		return ran.nextInt(maxPoN-minPoN+1)+minPoN;
 	}
 	
 	public int chinos()
 	{
-		aux = ran.nextInt(maxChi-minChi+1)+minChi;
-		
-		return aux;
+		return ran.nextInt(maxChi-minChi+1)+minChi;
 	}
 	
 	public int primitiva()
 	{
-		aux = ran.nextInt(maxPri-minPri+1)+minPri;
-		
-		return aux;
+		return ran.nextInt(maxPri-minPri+1)+minPri;
 	}
 
 }
