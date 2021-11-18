@@ -1,6 +1,6 @@
 package ejercicio04;
 
-import lectura.Leer;
+import utilidades.Leer;
 
 public class Principal {
 

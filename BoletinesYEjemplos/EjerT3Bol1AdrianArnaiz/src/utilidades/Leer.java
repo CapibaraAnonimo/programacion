@@ -1,4 +1,4 @@
-package lectura;
+package utilidades;
 
 import java.io.*;
 
