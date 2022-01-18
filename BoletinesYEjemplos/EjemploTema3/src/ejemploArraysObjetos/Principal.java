@@ -7,10 +7,10 @@ public class Principal {
 	public static void main(String[] args) {
 		int nVs = 0, seguir, tam = 100;// Contador de objetos Vehículo, variable para salir del bucle y tamaño
 		String modelo;
-		boolean cRuedas;
+		//boolean cRuedas;
 		// Creamos un array de objetos Vehiculo para almacenar 100 Vehículos
 		Vehiculo lista[] = new Vehiculo[tam];
-		String aux;
+		//String aux;
 		
 		do {
 			System.out.print("Introduce el modelo del vehículo: ");
