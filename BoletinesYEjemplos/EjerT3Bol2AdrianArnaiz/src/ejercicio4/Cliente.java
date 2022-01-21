@@ -1,6 +1,7 @@
 package ejercicio4;
 
 public class Cliente {
+	private int id;
 	private String dni;
 	private String nombre;
 	private String apellidos;
@@ -8,8 +9,9 @@ public class Cliente {
 	private double pesoKg;
 	private double alturaCm;
 	
-	public Cliente(String dni, String nombre, String apellidos, boolean activo, double pesoKg, double alturaCm) {
+	public Cliente(int id, String dni, String nombre, String apellidos, boolean activo, double pesoKg, double alturaCm) {
 		super();
+		this.id = id;
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -18,6 +20,14 @@ public class Cliente {
 		this.alturaCm = alturaCm;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getDni() {
 		return dni;
 	}
@@ -68,6 +78,11 @@ public class Cliente {
 	
 	public double imc() {
 		return pesoKg/Math.pow((alturaCm/100), 2);
+	}
+	
+	@Override
+	public String toString() {
+		return "id: " + id + "\nNombre: " + nombre + "\nApellidos: " + apellidos;
 	}
 
 }
