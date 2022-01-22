@@ -100,5 +100,10 @@ public class Electrodomestico {
 		else 
 			return precioBase+10;
 	}
+	
+	@Override
+	public String toString() {
+		return "Precio base: " + precioBase + "\nColor: " + color + "\nConsumo: " + consumo + "\nPeso: " + pesoKg + "Kg";
+	}
 
 }
