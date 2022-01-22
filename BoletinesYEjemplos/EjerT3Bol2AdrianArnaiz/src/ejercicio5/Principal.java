@@ -15,7 +15,8 @@ public class Principal {
 			System.out.println("\n\n1. Imprimir lista de productos"
 					+ "\n2. Precio final de un electrodoméstico"
 					+ "\n3. Suma de precios"
-					+ "\n4. Media de precios");
+					+ "\n4. Media de precios"
+					+ "\n0. Salir");
 			
 			do {
 				System.out.println("\nSeleccione una seccion");
