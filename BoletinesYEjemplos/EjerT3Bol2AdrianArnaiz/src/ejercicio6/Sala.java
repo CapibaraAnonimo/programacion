@@ -28,7 +28,7 @@ public class Sala {
 				new Entrada(12, 5, 3, 2),
 				new Entrada(13, 5, 3, 3),
 				new Entrada(14, 5, 3, 4),
-				new Entrada(15, 5, 3, 5),};
+				new Entrada(15, 5, 3, 5)};
 		ingresosTotales = 0;
 	}
 	
