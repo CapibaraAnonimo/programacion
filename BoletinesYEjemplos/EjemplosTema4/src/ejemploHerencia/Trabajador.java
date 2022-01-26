@@ -8,5 +8,9 @@ public class Trabajador {
 		this.cosa1 = cosa1;
 	}
 	
+	public double calcularPaga() {
+		return 0.0;
+	}
+	
 
 }

@@ -8,5 +8,10 @@ public class Empleado extends Trabajador {
 		this.cosa2 = cosa2;
 	}
 	
+	@Override
+	public double calcularPaga(){
+		return cosa2*10.0;
+	}
+	
 	
 }
