@@ -38,9 +38,9 @@ public class LineaComanda {
 			cantidad3 = ran.nextInt(maxCantidad - minCantidad + 1) + minCantidad;
 			}while(0 == producto3 || producto1 == producto3 || producto2 == producto3);
 			
-			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", comanda, producto1, cantidad1);
-			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", comanda, producto2, cantidad2);
-			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", comanda, producto3, cantidad3);
+			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", i+1, producto1, cantidad1);
+			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", i+1, producto2, cantidad2);
+			System.out.printf("insert into lineaDeComanda (comanda, producto, cantidad) values (%d, %d, %d);\n", i+1, producto3, cantidad3);
 		}
 
 	}
