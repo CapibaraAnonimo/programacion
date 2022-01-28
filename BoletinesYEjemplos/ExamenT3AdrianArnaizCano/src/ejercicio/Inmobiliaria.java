@@ -45,7 +45,7 @@ public class Inmobiliaria {
 
 	
 	
-	public void añadirPiso(String direccion, int metros2, boolean reformar, int precioVenta) {
+	public void anyadirPiso(String direccion, int metros2, boolean reformar, int precioVenta) {
 		this.piso = new Piso(direccion, metros2, reformar, precioVenta);
 	}
 	

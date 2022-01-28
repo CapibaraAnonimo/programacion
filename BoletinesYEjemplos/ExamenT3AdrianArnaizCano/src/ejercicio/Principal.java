@@ -10,21 +10,21 @@ public class Principal {
 		int precios[] = new int[6];
 		double libra = 0.88;
 		
-		inmo.añadirPiso("Rue del percebe, 13", 50, true, 1000);
+		inmo.anyadirPiso("Rue del percebe, 13", 50, true, 1000);
 		
 		do
 		{
 			do
 			{
-				System.out.println("\n\nIntroduzca la sección deseada\n\n"
+				System.out.println("\n\nIntroduzca la secciï¿½n deseada\n\n"
 						+ "1. Generar precios para el piso\n"
-						+ "2. Calcular el precio de venta al público el mes deseado\n"
+						+ "2. Calcular el precio de venta al pï¿½blico el mes deseado\n"
 						+ "3. Precio del metro cuadrado del mes deseado\n"
 						+ "4. Precio en libras esterlinas del mes deseado\n"
 						+ "5. Datos del piso\n");
 				seccion = Leer.datoInt();
 				if(seccion < 0 || seccion > 5)
-					System.out.println("Sección incorrecta, introduzca otra");
+					System.out.println("Secciï¿½n incorrecta, introduzca otra");
 			}while(seccion < 0 || seccion > 5);
 			
 			switch(seccion)
