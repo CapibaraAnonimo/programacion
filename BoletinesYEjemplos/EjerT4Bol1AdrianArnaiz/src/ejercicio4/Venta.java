@@ -18,8 +18,14 @@ public class Venta {
 
 	@Override
 	public String toString() {
-		String aux;
-		return "";
+		String aux = new String("\t\tSupermercado\n-------------------------------------\nCtd\tProducto\tPrecio\tTotal");
+		double total = 0;
+		for (int i = 0; i < ticket.length; i++) {
+			total = total + ticket[i].getProducto().getPrecioUnitario() * ticket[i].getCantidad();
+			aux = aux + "\n" + ticket[i];
+		}
+		aux = aux + "\n-------------------------------------\n\tTotal IVA INCLUIDO:\t" + total;
+		return aux;
 	}
 
 }
