@@ -28,7 +28,7 @@ public class LineaTicket {
 
 	@Override
 	public String toString() {
-		return cantidad + "\t" + producto.getNombre() + "\t" + producto.getPrecioUnitario() + "\t"
+		return cantidad + "\t" + producto.getNombre() + "\t" + producto.calcularPrecio() + "\t"
 				+ producto.getPrecioUnitario() * cantidad;
 	}
 
