@@ -13,7 +13,39 @@ public class Empleado {
 		this.recaudado = recaudado;
 		this.idEmpleado = idEmpleado;
 	}
-	
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public double getSueldoBase() {
+		return sueldoBase;
+	}
+
+	public void setSueldoBase(double sueldoBase) {
+		this.sueldoBase = sueldoBase;
+	}
+
+	public double getRecaudado() {
+		return recaudado;
+	}
+
+	public void setRecaudado(double recaudado) {
+		this.recaudado = recaudado;
+	}
+
+	public int getIdEmpleado() {
+		return idEmpleado;
+	}
+
+	public void setIdEmpleado(int idEmpleado) {
+		this.idEmpleado = idEmpleado;
+	}
+
 	public double calcularSueldo() {
 		return sueldoBase;
 	}
