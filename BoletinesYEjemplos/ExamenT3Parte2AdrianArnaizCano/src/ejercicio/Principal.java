@@ -2,10 +2,12 @@ package ejercicio;
 
 import utilidades.Leer;
 
+/**
+ * 
+ * @version 
+ *
+ */
 public class Principal {
-	//Bugs conocidos:
-	//-Se puede introducir mas crudo que volumen tiene el deposito
-	//-No se comprueba que los valores introducidos sean validos menos en la seccion
 	public static void main(String[] args) {
 		Plataforma plataforma = new Plataforma();
 		int seccion = 0, deposito, porcentaje, litros = 0;
