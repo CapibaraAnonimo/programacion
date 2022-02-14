@@ -46,7 +46,7 @@ public class Empleado {
 		this.idEmpleado = idEmpleado;
 	}
 
-	public double calcularSueldo() {
+	public double calcularSueldo(double impuesto) {
 		return sueldoBase;
 	}
 
