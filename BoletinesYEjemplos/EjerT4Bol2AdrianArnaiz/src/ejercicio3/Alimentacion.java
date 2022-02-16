@@ -54,7 +54,7 @@ public class Alimentacion extends Producto implements Pudrible {
 	@Override
 	public String avisoCaducidad(int diasCaducidad) {
 		int diasDescuento = 2;
-		if(diasCaducidad <= diasDescuento) {
+		if(tieneDescuento()) {
 			return "\tSe aplica descuento por caducidad próxima";
 		}
 		else

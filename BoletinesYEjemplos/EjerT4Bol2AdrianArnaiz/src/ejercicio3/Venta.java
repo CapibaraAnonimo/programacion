@@ -36,7 +36,7 @@ public class Venta {
 		for (int i = 0; i < ticket.length; i++) {
 			total = total + ticket[i].getProducto().calcularPrecio() * ticket[i].getCantidad();
 			aux = aux + "\n" + ticket[i];
-			if (ticket[i].getProducto() instanceof Alimentacion) {
+			if (ticket[i].getProducto() instanceof Alimentacion) {	//Comprobación para Alimentacion por si tiene descuento
 				aux = aux + ((Alimentacion) ticket[i].getProducto())
 						.avisoCaducidad(((Alimentacion) ticket[i].getProducto()).getDiasCaducidad());
 			}

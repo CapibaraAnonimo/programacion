@@ -29,7 +29,7 @@ public class LineaTicket {
 	@Override
 	public String toString() {
 		return cantidad + "\t" + producto.getNombre() + "\t" +  Math.floor(producto.calcularPrecio() * 100) / 100 + "\t"
-				+ producto.getPrecioUnitario() * cantidad;
+				+ Math.floor((producto.calcularPrecio() * cantidad) *100)/100;
 	}
 
 }
