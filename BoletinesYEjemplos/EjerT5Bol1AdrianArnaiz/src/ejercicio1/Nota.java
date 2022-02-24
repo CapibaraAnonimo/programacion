@@ -6,10 +6,11 @@ public class Nota {
 	private String cuerpo;
 	private boolean urgente;
 
-	public Nota(String titulo, String cuerpo, boolean urgente) {
+	public Nota(String titulo, String cuerpo, boolean urgente, int idNota) {
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
 		this.urgente = urgente;
+		this.idNota = idNota;
 	}
 
 	public int getIdNota() {
