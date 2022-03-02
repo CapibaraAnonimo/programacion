@@ -8,7 +8,7 @@ import utilidades.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		List<Socio> lista = new ArrayList();
+		List<Socio> lista = new ArrayList<Socio>();
 		Socio s1 = new Socio(1, "00000000a", "Nombre1", "Apellido1");
 		Socio s2 = new Socio(2, "00000001a", "Nombre2", "Apellido2");
 		Socio comprobacion;
@@ -16,10 +16,11 @@ public class Principal {
 		String dni = new String(""), nombre = new String(""), apellidos = new String("");
 		boolean exito = false;
 
-		GestionClub club = new GestionClub(lista);
+		GestionClub club;
 
-		club.anyadirSocio(s1);
-		club.anyadirSocio(s2);
+		lista.add(s1);
+		lista.add(s2);
+		club = new GestionClub(lista);
 
 		do {
 			System.out.println("\n\n1. Ingresar nuevo socio\n" + "2. Buscar socio\n" + "3. Mostrar datos de un socio\n"
@@ -27,9 +28,9 @@ public class Principal {
 			do {
 				System.out.println("Indique una sección");
 				seccion = Leer.datoInt();
-				if(seccion < 0 || seccion > 5)
+				if (seccion < 0 || seccion > 5)
 					System.out.println("La sección es incorrecta");
-			}while(seccion < 0 || seccion > 5);
+			} while (seccion < 0 || seccion > 5);
 
 			switch (seccion) {
 			case 1:
@@ -46,8 +47,7 @@ public class Principal {
 					club.anyadirSocio(new Socio(id, dni, nombre, apellidos));
 
 					System.out.println("\nSe a creado el socio");
-				}
-				else
+				} else
 					System.out.println("Ese id ya está en uso");
 
 				break;
@@ -82,15 +82,14 @@ public class Principal {
 			case 5:
 				System.out.println("Indique el id del socio que quiere eliminar");
 				id = Leer.datoInt();
-				if(club.comprobarCoincidenciaId(id)) {
+				if (club.comprobarCoincidenciaId(id)) {
 					System.out.println("¿Está seguro de querer eliminar el socio?\n Sí = 1\t\tNo = 0");
 					seguro = Leer.datoInt();
-					if(seguro == 1)
+					if (seguro == 1)
 						club.eliminarSocio(id);
 					else
 						System.out.println("Se ha abortado la operación");
-				}
-				else
+				} else
 					System.out.println("No existe el socio que desea eliminar");
 			}
 		} while (seccion != 0);
