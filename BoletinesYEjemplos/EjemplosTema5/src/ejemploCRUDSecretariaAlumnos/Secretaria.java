@@ -69,6 +69,16 @@ public class Secretaria {
 		return tem;
 	}
 
+	public List<Alumno> buscarAlum3(String nombre) {
+		List<Alumno> listaAux = new ArrayList();
+
+		for (int i = 0; i < listAlumnos.size(); i++) {
+			if (listAlumnos.get(i).getNombre() == nombre)
+				listaAux.add(listAlumnos.get(i));
+		}
+		return listaAux;
+	}
+
 	public void imprimirLista() {
 		for (Alumno alumno : listAlumnos) {
 			System.out.println(alumno);
