@@ -2,10 +2,13 @@ package ejercicio4;
 
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 public class Agenda {
 	private Map<Contacto, Integer> agenda;
+
+	public Agenda() {
+		super();
+	}
 
 	public Agenda(Map<Contacto, Integer> agenda) {
 		super();
@@ -56,22 +59,22 @@ public class Agenda {
 		else
 			System.out.println("No existe el contacto");
 	}
-	
+
 	public String mostrarAgenda() {
 		String lista = new String("");
 		boolean salir = false;
 		Iterator<Contacto> it = agenda.keySet().iterator();
-		
-		while(it.hasNext() && !salir) {
+
+		while (it.hasNext() && !salir) {
 			lista.concat(it.next().toString().concat("\n"));
 		}
 		return lista;
 	}
-	
+
 	public Integer buscarNumero(String nombre) {
 		Integer numero = 0;
 		Contacto contacto = buscarContacto(nombre);
-		
+
 		if (contacto != null)
 			numero = agenda.get(contacto);
 		return numero;
