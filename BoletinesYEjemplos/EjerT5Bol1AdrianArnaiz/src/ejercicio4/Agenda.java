@@ -67,5 +67,14 @@ public class Agenda {
 		}
 		return lista;
 	}
+	
+	public Integer buscarNumero(String nombre) {
+		Integer numero = 0;
+		Contacto contacto = buscarContacto(nombre);
+		
+		if (contacto != null)
+			numero = agenda.get(contacto);
+		return numero;
+	}
 
 }
