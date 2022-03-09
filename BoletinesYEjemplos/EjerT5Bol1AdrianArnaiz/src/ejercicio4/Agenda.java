@@ -64,10 +64,14 @@ public class Agenda {
 		String lista = new String("");
 		boolean salir = false;
 		Iterator<Contacto> it = agenda.keySet().iterator();
-
-		while (it.hasNext() && !salir) {
-			lista.concat(it.next().toString().concat("\n"));
+		
+		if(!agenda.isEmpty()) {
+			while (it.hasNext() && !salir) {
+				lista.concat(it.next().toString().concat("\n"));
+			}			
 		}
+		else
+			lista = "No tienes amigos";
 		return lista;
 	}
 
