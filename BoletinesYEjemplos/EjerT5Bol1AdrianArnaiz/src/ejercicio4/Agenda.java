@@ -1,5 +1,6 @@
 package ejercicio4;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -8,6 +9,7 @@ public class Agenda {
 
 	public Agenda() {
 		super();
+		this.agenda = new HashMap();
 	}
 
 	public Agenda(Map<Contacto, Integer> agenda) {
@@ -24,7 +26,7 @@ public class Agenda {
 	}
 
 	public void agregarContacto(Contacto contacto, int numero) {
-		agenda.put(contacto, (Integer) numero);
+		agenda.put(contacto, numero);
 	}
 
 	public boolean eliminarContacto(String nombre) {
@@ -63,11 +65,13 @@ public class Agenda {
 	public String mostrarAgenda() {
 		String lista = new String("");
 		boolean salir = false;
+		Contacto contactoActual;
 		Iterator<Contacto> it = agenda.keySet().iterator();
 		
 		if(!agenda.isEmpty()) {
 			while (it.hasNext() && !salir) {
-				lista.concat(it.next().toString().concat("\n"));
+				contactoActual = it.next();
+				lista.concat(contactoActual.toString().concat("\n"));
 			}			
 		}
 		else
@@ -82,6 +86,17 @@ public class Agenda {
 		if (contacto != null)
 			numero = agenda.get(contacto);
 		return numero;
+	}
+	
+	public boolean editarContacto(String nombre, int numero) {
+		boolean editado = false;
+		Contacto contacto = buscarContacto(nombre);
+		
+		if(contacto != null) {
+			editado = true;
+			agenda.replace(contacto, numero);
+		}
+		return editado;
 	}
 
 }
