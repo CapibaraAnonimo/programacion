@@ -46,6 +46,7 @@ public class Principal {
 					System.out.printf("El número de %s es %d\n", nombre, numero);
 				else
 					System.out.println("El contacto no existe");
+				break;
 				
 			case 5:
 				System.out.println("Introduzca el nombre del contacto al que quiera cambairle el número");

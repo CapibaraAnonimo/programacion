@@ -9,7 +9,7 @@ public class Agenda {
 
 	public Agenda() {
 		super();
-		this.agenda = new HashMap();
+		this.agenda = new HashMap<Contacto, Integer>();
 	}
 
 	public Agenda(Map<Contacto, Integer> agenda) {
@@ -50,7 +50,7 @@ public class Agenda {
 				salir = true;
 			}
 		}
-		if (salir == false)
+		if (salir == true)
 			clave = null;
 		return clave;
 	}
