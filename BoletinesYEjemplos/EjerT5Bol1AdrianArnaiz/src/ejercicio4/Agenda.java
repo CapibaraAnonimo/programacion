@@ -67,14 +67,13 @@ public class Agenda {
 		boolean salir = false;
 		Contacto contactoActual;
 		Iterator<Contacto> it = agenda.keySet().iterator();
-		
-		if(!agenda.isEmpty()) {
+
+		if (!agenda.isEmpty()) {
 			while (it.hasNext()) {
 				contactoActual = it.next();
 				lista = lista + contactoActual;
-			}			
-		}
-		else
+			}
+		} else
 			lista = "No tienes amigos";
 		return lista;
 	}
@@ -87,12 +86,12 @@ public class Agenda {
 			numero = agenda.get(contacto);
 		return numero;
 	}
-	
+
 	public boolean editarContacto(String nombre, int numero) {
 		boolean editado = false;
 		Contacto contacto = buscarContacto(nombre);
-		
-		if(contacto != null) {
+
+		if (contacto != null) {
 			editado = true;
 			agenda.replace(contacto, numero);
 		}
