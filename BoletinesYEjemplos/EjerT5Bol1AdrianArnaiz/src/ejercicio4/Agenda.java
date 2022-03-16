@@ -71,7 +71,7 @@ public class Agenda {
 		if(!agenda.isEmpty()) {
 			while (it.hasNext()) {
 				contactoActual = it.next();
-				lista.concat(contactoActual.toString().concat("\n"));
+				lista = lista + contactoActual;
 			}			
 		}
 		else
