@@ -46,11 +46,11 @@ public class Agenda {
 
 		while (it.hasNext() && !salir) {
 			clave = it.next();
-			if (clave.getNombre() == nombre) {
+			if (clave.getNombre().equalsIgnoreCase(nombre)) {
 				salir = true;
 			}
 		}
-		if (salir == true)
+		if (salir == false)
 			clave = null;
 		return clave;
 	}
@@ -69,7 +69,7 @@ public class Agenda {
 		Iterator<Contacto> it = agenda.keySet().iterator();
 		
 		if(!agenda.isEmpty()) {
-			while (it.hasNext() && !salir) {
+			while (it.hasNext()) {
 				contactoActual = it.next();
 				lista.concat(contactoActual.toString().concat("\n"));
 			}			
