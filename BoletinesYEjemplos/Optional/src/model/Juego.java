@@ -29,4 +29,11 @@ public class Juego {
 	private Optional<Integer> coleccionables;
 	private Integer colleccionablesMax;
 
+	public Juego(int id, String nombre, Set<String> plataformas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.plataformas = plataformas;
+	}
+
 }
