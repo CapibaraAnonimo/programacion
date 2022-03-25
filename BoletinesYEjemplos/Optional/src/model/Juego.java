@@ -12,9 +12,7 @@ public class Juego {
 //	Kingdom Come Deliveance
 //	Hollow Knight
 //	Pokemon Platino
-	private int id;
 	private String nombre;
-	private Set<String> plataformas;
 	private Optional<Integer> nivelMundo;
 	private Integer nivelMundoMax;
 	private Optional<Integer> nivelPersonaje;
@@ -28,12 +26,14 @@ public class Juego {
 	private Integer minisonesCompletadasMax;
 	private Optional<Integer> coleccionables;
 	private Integer colleccionablesMax;
+	
+	public Juego() {
+		
+	}
 
-	public Juego(int id, String nombre, Set<String> plataformas) {
+	public Juego(String nombre, Set<String> plataformas) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
-		this.plataformas = plataformas;
 	}
 
 }
