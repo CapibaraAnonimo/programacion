@@ -18,12 +18,12 @@ public class CrudJuego {
 		juegos = new HashMap<String, Optional<Juego>>();
 	}
 
-	public void anyadirJuego(String nombre, Optional<Integer> nivelMundo,
-			Integer nivelMundoMax, Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
+	public void anyadirJuego(String nombre, Optional<Integer> nivelMundo, Integer nivelMundoMax,
+			Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
 		if (nombre == null)
 			juegos.put(nombre, Optional.ofNullable(null));
-		juegos.put(nombre, Optional.ofNullable(
-				new Plataformas(nombre, nivelMundo, nivelMundoMax, jefesMatados, jefesMatadosMax)));
+		juegos.put(nombre,
+				Optional.ofNullable(new Plataformas(nombre, nivelMundo, nivelMundoMax, jefesMatados, jefesMatadosMax)));
 	}
 
 	public String comprobarEstadoJuego(String nombre) {
@@ -43,6 +43,18 @@ public class CrudJuego {
 			juego = it.next();
 		}
 		return juego;
+	}
+
+	public void imprimirJuegos() {
+		Iterator<String> it = juegos.keySet().iterator();
+		String nombre;
+		Optional<Juego> juego;
+		
+		while(it.hasNext()) {
+			nombre = it.next();
+			juego = Optional.ofNullable(juegos.get(nombre).orElse(null));
+			System.out.println(juego.orElseGet(() -> 5));
+		}
 	}
 
 }
