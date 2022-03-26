@@ -9,12 +9,17 @@ public class Plataformas extends Juego {
 	private Optional<Integer> jefesMatados;
 	private Integer jefesMatadosMax;
 
-	public Plataformas(String nombre, Optional<Integer> nivelMundo,
-			Integer nivelMundoMax, Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
+	public Plataformas(String nombre, Optional<Integer> nivelMundo, Integer nivelMundoMax,
+			Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
 		this.nivelMundo = nivelMundo;
 		this.nivelMundoMax = nivelMundoMax;
 		this.jefesMatados = jefesMatados;
 		this.jefesMatadosMax = jefesMatadosMax;
+	}
+
+	@Override
+	public String toString() {
+		return "Nivel de mundo: " + nivelMundo.get() + " de " + nivelMundoMax + " niveles.\nJefes Matados: " + jefesMatados.get() + " de " + jefesMatadosMax;
 	}
 
 }

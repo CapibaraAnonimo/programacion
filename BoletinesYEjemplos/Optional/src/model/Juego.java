@@ -3,7 +3,7 @@ package model;
 import java.util.Optional;
 import java.util.Set;
 
-public class Juego {
+public abstract class Juego {
 //	Juegos:
 //	New Super Mario Bros
 //	Fifa
@@ -26,12 +26,12 @@ public class Juego {
 	private Integer minisonesCompletadasMax;
 	private Optional<Integer> coleccionables;
 	private Integer colleccionablesMax;
-	
+
 	public Juego() {
-		
+
 	}
 
-	public Juego(String nombre, Set<String> plataformas) {
+	public Juego(String nombre) {
 		super();
 		this.nombre = nombre;
 	}
