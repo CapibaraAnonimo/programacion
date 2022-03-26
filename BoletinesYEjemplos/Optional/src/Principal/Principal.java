@@ -29,6 +29,7 @@ public class Principal {
 				seccion = Leer.datoInt();
 				switch (seccion) {
 				case 0:
+					juegos.anyadirJuego(nombre, Optional.ofNullable(null), nivelMundoMax, Optional.ofNullable(null), jefesMatadosMax);
 					break;
 
 				case 1:
@@ -43,8 +44,6 @@ public class Principal {
 					break;
 				}
 				seccion = 1;
-				juegos.anyadirJuego(nombre, Optional.ofNullable(nivelMundo), nivelMundoMax,
-						Optional.ofNullable(jefesMatados), jefesMatadosMax);
 				break;
 				
 			case 2:

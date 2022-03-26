@@ -18,7 +18,8 @@ public class CrudJuego {
 		juegos = new HashMap<String, Optional<Juego>>();
 	}
 
-	public void anyadirJuego(String nombre, Optional<Integer> nivelMundo, Integer nivelMundoMax, Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
+	public void anyadirJuego(String nombre, Optional<Integer> nivelMundo, Integer nivelMundoMax,
+			Optional<Integer> jefesMatados, Integer jefesMatadosMax) {
 		if (nivelMundo.isPresent())
 			juegos.put(nombre,
 					Optional.of(new Plataformas(nombre, nivelMundo, nivelMundoMax, jefesMatados, jefesMatadosMax)));
@@ -52,8 +53,7 @@ public class CrudJuego {
 
 		while (it.hasNext()) {
 			nombre = it.next();
-			juego = Optional.ofNullable(juegos.get(nombre).orElse(null)); // Guardo en juego el Optioanl juego que tenga
-																			// la clave del nombre o null
+			juego = juegos.get(nombre); // Guardo en juego el Optioanl juego que tenga la clave del nombre o null
 			System.out.printf(nombre + ":\n");
 			if (juego.isPresent()) {
 				System.out.println(juego.get());
