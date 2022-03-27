@@ -49,7 +49,7 @@ public class Principal {
 			case 2:
 				System.out.println("Introduzca el nombre del juego que quiere ver su estado");
 				nombre = Leer.dato();
-				juegos.comprobarEstadoJuego(nombre);
+				System.out.println(juegos.comprobarEstadoJuego(nombre));
 				break;
 				
 			case 3:

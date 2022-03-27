@@ -30,18 +30,20 @@ public class CrudJuego {
 	public String comprobarEstadoJuego(String nombre) {
 		Optional<Juego> juego;
 		juego = buscarJuegoNombre(nombre);
-		if (juego.isPresent()) {
-			return "Has empezado el juego";
+		if(juego != null) {
+			if (juego.isPresent()) {
+				return "Has empezado el juego";
+			} else
+				return "No has empezado el juego";
 		} else
-			return "No has empezado el juego";
+			return "No existe el juego";
 	}
 
 	public Optional<Juego> buscarJuegoNombre(String nombre) {
-		Iterator<Optional<Juego>> it;
 		Optional<Juego> juego = null;
-		boolean encontrado = false;
-		while (it.hasNext() && !encontrado) {
-			juego = it.next();
+		for(String n : juegos.keySet()) {
+			if(n.equals(nombre))
+				juego = juegos.get(nombre);
 		}
 		return juego;
 	}
