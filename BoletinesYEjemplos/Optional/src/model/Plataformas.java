@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Optional;
-import java.util.Set;
 
 public class Plataformas extends Juego {
 	private Optional<Integer> nivelMundo;
@@ -17,9 +16,18 @@ public class Plataformas extends Juego {
 		this.jefesMatadosMax = jefesMatadosMax;
 	}
 
+	public String calcularAvance() {
+		double nivelMundoA = (double) nivelMundo.get() / nivelMundoMax * 100;
+		double jefes = (double) jefesMatados.get() / jefesMatadosMax * 100;
+		return "Avance nivel de mundo: " + nivelMundo.get() + "/" + nivelMundoMax + " = " + Math.floor(nivelMundoA)
+				+ "%\nAvance jefes matados: " + jefesMatados.get() + "/" + jefesMatadosMax + " = " + Math.floor(jefes)
+				+ "%";
+	}
+
 	@Override
 	public String toString() {
-		return "Nivel de mundo: " + nivelMundo.get() + " de " + nivelMundoMax + " niveles.\nJefes Matados: " + jefesMatados.get() + " de " + jefesMatadosMax;
+		return "Nivel de mundo: " + nivelMundo.get() + " de " + nivelMundoMax + " niveles.\nJefes Matados: "
+				+ jefesMatados.get() + " de " + jefesMatadosMax;
 	}
 
 }
