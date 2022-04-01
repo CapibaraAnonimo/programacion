@@ -21,8 +21,8 @@ public class Principal {
 		Integer nivelMundo = null, jefesMatados = null;
 		CrudJuego juegos = new CrudJuego();
 
-		System.out.println("Vienvenido al gestor de Partidas de la saga de juegos clasicos de Super Mario Bros");
-
+		System.out.println("Bienvenido al gestor de Partidas de la saga de juegos clasicos de Super Mario Bros");
+		
 		do {
 			System.out
 					.println("\n\n1. Añadir juego" + "\n2. Mirar estado de un juego" + "\n3. Imprimir todos tus juegos"
