@@ -12,7 +12,7 @@ public class Secretaria {
 		this.alumnos = alumnos;
 	}
 
-	public List<Alumno> filtrarMedia(int media) {
+	public List<Alumno> filtrarMedia(double media) {
 		return alumnos
 				.stream()
 				.filter(a -> a.getNotaMedia() >= media)
@@ -84,31 +84,3 @@ public class Secretaria {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
