@@ -34,7 +34,7 @@ public class Cancion {
 
 	@Override
 	public String toString() {
-		return "Cancion [nombre=" + nombre + ", autor=" + autor + ", genero=" + genero + ", duracion=" + duracion + "]";
+		return "Cancion [nombre=" + nombre + ", autor=" + autor + ", genero=" + genero + ", duracion=" + duracion + "]\n";
 	}
 
 }

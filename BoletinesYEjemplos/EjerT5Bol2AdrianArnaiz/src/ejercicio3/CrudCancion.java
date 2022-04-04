@@ -1,5 +1,6 @@
 package ejercicio3;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,6 +24,13 @@ public class CrudCancion {
 		return canciones
 				.stream()
 				.filter(c -> c.getAutor().equalsIgnoreCase(autor))
+				.collect(Collectors.toList());
+	}
+	
+	public List<Cancion> buscarMinimo(Duration duracion) {
+		return canciones
+				.stream()
+				.filter(c -> c.getDuracion().compareTo(duracion) == 1 || c.getDuracion().compareTo(duracion) == 0)
 				.collect(Collectors.toList());
 	}
 

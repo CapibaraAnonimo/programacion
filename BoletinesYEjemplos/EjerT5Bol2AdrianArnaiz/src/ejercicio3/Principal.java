@@ -31,7 +31,9 @@ public class Principal {
 
 		do {
 			System.out.println("\n\n1. Buscar canción por nombre"
-					+ "\n2. Buscar Canciones de un autor");
+					+ "\n2. Buscar Canciones de un autor"
+					+ "\n3. Buscar por duración máxima"
+					+ "\n4. Buscar por duración mínima");
 			seccion = Leer.datoInt();
 
 			switch (seccion) {
@@ -48,6 +50,9 @@ public class Principal {
 			case 2:
 				aux = Leer.dato();
 				System.out.println(crud.buscarAutor(aux));
+				break;
+				
+			case 3:
 				break;
 
 			case 0:
