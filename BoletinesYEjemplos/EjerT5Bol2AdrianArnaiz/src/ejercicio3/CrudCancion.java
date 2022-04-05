@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CrudCancion {
 	private List<Cancion> canciones;
@@ -38,6 +39,12 @@ public class CrudCancion {
 		return canciones
 				.stream()
 				.filter(c -> c.getDuracion().compareTo(duracion) == 0 || c.getDuracion().compareTo(duracion) == 0)
+				.collect(Collectors.toList());
+	}
+	
+	public List<Cancion> buscarMaximoMinimo(Duration maximo, Duration minimo) {
+		return Stream
+				.concat(buscarMaximo(maximo).stream(), buscarMinimo(minimo).stream())
 				.collect(Collectors.toList());
 	}
 
