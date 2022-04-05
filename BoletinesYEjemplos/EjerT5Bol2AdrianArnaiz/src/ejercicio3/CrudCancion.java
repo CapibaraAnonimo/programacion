@@ -33,5 +33,12 @@ public class CrudCancion {
 				.filter(c -> c.getDuracion().compareTo(duracion) == 1 || c.getDuracion().compareTo(duracion) == 0)
 				.collect(Collectors.toList());
 	}
+	
+	public List<Cancion> buscarMaximo(Duration duracion) {
+		return canciones
+				.stream()
+				.filter(c -> c.getDuracion().compareTo(duracion) == 0 || c.getDuracion().compareTo(duracion) == 0)
+				.collect(Collectors.toList());
+	}
 
 }
