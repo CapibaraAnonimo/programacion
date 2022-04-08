@@ -18,13 +18,13 @@ public class Principal {
 		List<Cancion> canciones = new ArrayList<Cancion>();
 		CrudCancion crud;
 
-		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powemetal",
+		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powermetal",
 				Duration.between(LocalTime.of(0, 0), LocalTime.of(0, 4, 47))));
-		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powemetal",
+		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powermetal",
 				Duration.between(LocalTime.of(0, 0), LocalTime.of(0, 4, 47))));
-		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powemetal",
+		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powermetal",
 				Duration.between(LocalTime.of(0, 0), LocalTime.of(0, 4, 47))));
-		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powemetal",
+		canciones.add(new Cancion("Down of Victory", "Rhapsody", "Powermetal",
 				Duration.between(LocalTime.of(0, 0), LocalTime.of(0, 4, 47))));
 
 		crud = new CrudCancion(canciones);
