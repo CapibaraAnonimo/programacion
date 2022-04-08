@@ -91,8 +91,9 @@ public class Principal {
 						"Introduce la cantidad de segundos mínima que pueda tener una canción (se sumaran con lo minutos anteriores)");
 				segundos2 = 0;
 				segundos2 = Leer.datoInt();
-				crud.buscarMaximoMinimo(Duration.between(LocalTime.of(0, 0), LocalTime.of(0, minutos, segundos)),
-						Duration.between(LocalTime.of(0, 0), LocalTime.of(0, minutos2, segundos2)));
+				System.out.println(crud.buscarMaximoMinimo(
+						Duration.between(LocalTime.of(0, 0), LocalTime.of(0, minutos, segundos)),
+						Duration.between(LocalTime.of(0, 0), LocalTime.of(0, minutos2, segundos2))));
 				break;
 
 			case 0:
