@@ -57,7 +57,7 @@ public class Persona {
 			setDni(lector.nextLine());
 			lector.close();
 		} catch (Exception e) {
-			System.out.println(e);
+			System.err.println(e.getStackTrace()[0].getLineNumber());
 		}
 	}
 
