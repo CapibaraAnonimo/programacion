@@ -23,7 +23,7 @@ public class Principal {
 			System.out.println("Hay un único resultado, x = " + raices[0]);
 		else
 			System.out.println("Hay dos resultados, x = " + raices[0] + " y x = " + raices[1]);
-
+		escaner.close();
 	}
 
 }
